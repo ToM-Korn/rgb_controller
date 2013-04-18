@@ -4,7 +4,7 @@
 #include <Wire.h>
 
 
-const byte MY_ADDRESS = 42;
+const byte MY_ADDRESS = 0x32;
 int red = 9;
 int green =10;
 int blue = 11;

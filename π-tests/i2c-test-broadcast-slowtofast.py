@@ -1,29 +1,36 @@
- #!/usr/bin/python
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
 import os, sys
+import smbus
+import time
 
+bus = smbus.SMBus(0)
+
+addresses_dic = {'line1':0x28,'line2':0x29,'line3':0x32} 
+ 
+bus = smbus.SMBus(1)
+ 
 
 def color_transmitter():
-  color_change_dic = {}
-  x = 1
-  while x == 1 :
-    choice = raw_input("> ")
-    print choice;
-    input_lst = choice.split(" ")
-    for elem in input_lst:
-      if elem[0] == 'L':
-        color_change_dic['L'] = elem[1:]
-      if elem[0] == 'R':
-        color_change_dic['R'] = elem[1:]
-      if elem[0] == 'G':
-        color_change_dic['G'] = elem[1:]
-      if elem[0] == 'B':
-        color_change_dic['B'] = elem[1:]
-      if elem[0] == 'D':
-        color_change_dic['D'] = elem[1:]
-      if elem[0] == 'X':
-        sys.exit(0)
-    print color_change_dic
+
+  colors_lst = ['R','G','B']
+  sleep_lst = [10,1,0.1,0.001,0.0001]
+  for sleep_float in sleep_lst:
+         
+    for color in colors_lst: 
+      bus.write_byte(0x0,ord("C"))
+      bus.write_byte(0x0,ord(color))      
+      bus.write_byte(0x0,255)
+  
+    time.sleep(sleep_float)        
+  
+    for color in colors_lst: 
+      bus.write_byte(0x0,ord("C"))
+      bus.write_byte(0x0,ord(color))      
+      bus.write_byte(0x0,0)
+    
+    time.sleep(sleep_float)  
+    
 
 def main():
   # This Commandline provides the ability to controll a ToMsRGB controller with I2C

@@ -1,29 +1,32 @@
- #!/usr/bin/python
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
 import os, sys
+import smbus
+import time
 
+bus = smbus.SMBus(0)
+
+#addresses_dic = {'line1':0x28,'line2':0x29,'line3':0x32,'line_broadcast':0x00} 
+addresses_dic = {'line_broadcast':0x32} 
+ 
+bus = smbus.SMBus(1)
+ 
+# try self.bus.write_byte(self.addr, ord(cmd), msg) for writing to arduino
 
 def color_transmitter():
-  color_change_dic = {}
-  x = 1
-  while x == 1 :
-    choice = raw_input("> ")
-    print choice;
-    input_lst = choice.split(" ")
-    for elem in input_lst:
-      if elem[0] == 'L':
-        color_change_dic['L'] = elem[1:]
-      if elem[0] == 'R':
-        color_change_dic['R'] = elem[1:]
-      if elem[0] == 'G':
-        color_change_dic['G'] = elem[1:]
-      if elem[0] == 'B':
-        color_change_dic['B'] = elem[1:]
-      if elem[0] == 'D':
-        color_change_dic['D'] = elem[1:]
-      if elem[0] == 'X':
-        sys.exit(0)
-    print color_change_dic
+
+  colors_lst = ['R','G','B']
+ 
+  for address in addresses_dic:
+    print address
+    bus.write_byte(addresses_dic[address],ord("C"))
+    time.sleep(0.1)
+    for color in colors_lst: 
+      bus.write_byte(addresses_dic[address],255)
+      time.sleep(0.1)
+    bus.write_byte(addresses_dic[address],ord("X"))
+    time.sleep(0.1)
+    
 
 def main():
   # This Commandline provides the ability to controll a ToMsRGB controller with I2C

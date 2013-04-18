@@ -49,47 +49,6 @@ int fader_blue;
 
 void loop() 
   {
-    int red_fading;
-    int green_fading;
-    int blue_fading; 
-    
-    if (fader_red > red_actual){
-      red_fading = red_actual +1;
-    } else if (fader_red < red_actual) {
-      red_fading = red_actual -1;
-    } else {
-     red_fading = red_actual;
-    }
-
-    if (fader_green > green_actual){
-      green_fading = green_actual +1;
-    } else if (fader_green < green_actual) {
-      green_fading = green_actual -1;
-    } else {
-     green_fading = green_actual;
-    }
-    
-    if (fader_blue > blue_actual){
-      blue_fading = blue_actual +1;
-    } else if (fader_blue < blue_actual) {
-      blue_fading = blue_actual -1;
-    } else {
-     blue_fading = blue_actual;
-    }
-
-    
-    if (red_actual != red_fading) {
-      analogWrite(red,red_fading);
-      red_actual = red_fading;
-    }
-    if (green_actual != green_fading) {
-      analogWrite(green,green_fading);
-      green_actual = green_fading;
-    }
-    if (blue_actual != blue_fading) {
-      analogWrite(blue,blue_fading);
-      blue_actual=blue_fading;
-    }
 
     
     
@@ -135,21 +94,22 @@ void receiveEvent (int howMany) {
       if (color_init==1 && color_select==1){
         switch (color) {
           case 0:
-            fader_red = c;
-            color_init =0;
+              analogWrite(red,c);
+              color_init =0;
             color_select =0;
         Serial.println("setting r");
 
           break;
           case 1:
-            fader_green = c;
+              analogWrite(green,c);
+
             color_init =0;
             color_select =0;
             Serial.println("setting g");
 
           break;
           case 2:
-            fader_blue = c;
+            analogWrite(blue,c);
             color_init =0;
             color_select =0;
             Serial.println("settnig b");
