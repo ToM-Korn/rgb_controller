@@ -11,46 +11,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "arduino-tests/arduino_new_interpreter.ino",
-			"settings":
-			{
-				"buffer_size": 4251,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "π-tests/i2c-communication_with_broadcast.py",
-			"settings":
-			{
-				"buffer_size": 1375,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "π-tests/quicktest_cyz_i2c.py",
-			"settings":
-			{
-				"buffer_size": 1186,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "π-tests/nano.save",
-			"settings":
-			{
-				"buffer_size": 7253,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "arduino-tests/arduino_new_interpreter-test/arduino_new_interpreter-test.ino",
-			"settings":
-			{
-				"buffer_size": 773,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -108,11 +68,15 @@
 	},
 	"file_history":
 	[
+		"/Users/thomas/github/rgb_controller/arduino-tests/arduino_new_interpreter-test/arduino_new_interpreter-test.ino",
+		"/Users/thomas/github/rgb_controller/π-tests/nano.save",
+		"/Users/thomas/github/rgb_controller/π-tests/i2c-communication_with_broadcast.py",
+		"/Users/thomas/github/rgb_controller/π-tests/quicktest_cyz_i2c.py",
+		"/Users/thomas/github/rgb_controller/arduino-tests/arduino_new_interpreter.ino",
 		"/Users/thomas/github/rgb_controller/quicktest_cyz_i2c",
 		"/Users/thomas/github/rgb_controller/arduino-tests/arduino_new_interpreter-test.ino",
 		"/Users/thomas/github/drawer_divider/parametric-box-divider.scad",
 		"/Users/thomas/github/rgb_controller/arduino-tests/i2c_wire_tests/i2c_wire_tests.ino",
-		"/Users/thomas/github/rgb_controller/π-tests/i2c-communication_with_broadcast.py",
 		"/Users/thomas/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
 		"/Users/thomas/Library/Application Support/Sublime Text 2/Packages/SideBarEnhancements/messages/11.13.2012.1305.0.txt"
 	],
@@ -158,147 +122,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "arduino-tests/arduino_new_interpreter.ino",
-					"settings":
-					{
-						"buffer_size": 4251,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								512,
-								512
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Arduino-like IDE/Arduino.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "π-tests/i2c-communication_with_broadcast.py",
-					"settings":
-					{
-						"buffer_size": 1375,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								1375
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "π-tests/quicktest_cyz_i2c.py",
-					"settings":
-					{
-						"buffer_size": 1186,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								476,
-								476
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "π-tests/nano.save",
-					"settings":
-					{
-						"buffer_size": 7253,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1764,
-								1790
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 165.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "arduino-tests/arduino_new_interpreter-test/arduino_new_interpreter-test.ino",
-					"settings":
-					{
-						"buffer_size": 773,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								527,
-								527
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Arduino-like IDE/Arduino.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
